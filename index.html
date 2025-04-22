@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guardian AI Intro</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #0D3E84;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    .intro-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: #0D3E84;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      transition: opacity 1.5s ease;
+    }
+
+    .intro-container img {
+      width: 40vw;
+      max-width: 500px;
+      transition: transform 2.5s ease-in-out;
+      transform: scale(1);
+    }
+
+    .intro-container.zoomed img {
+      transform: scale(3);
+    }
+
+    .main-content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      background-color: #0D3E84;
+      color: white;
+      z-index: 1;
+      transition: opacity 1.5s ease;
+    }
+
+    .main-content.visible {
+      opacity: 1;
+    }
+
+    .main-content .content-wrapper {
+      max-width: 900px;
+      margin: auto;
+      padding: 4rem 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      text-align: center;
+    }
+    p {
+      font-size: 1.1rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="intro-container" id="intro">
+    <img src="smartphone_intro.png" alt="Smartphone zoom animation">
+  </div>
+
+  <div class="main-content" id="main">
+    <div class="content-wrapper">
+      <h1>Bienvenue sur Guardian AI</h1>
+      <p>Voici votre site complet qui s'affiche après l’intro animée.</p>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener('load', () => {
+      const intro = document.getElementById('intro');
+      const main = document.getElementById('main');
+
+      setTimeout(() => {
+        intro.classList.add('zoomed');
+      }, 500);
+
+      setTimeout(() => {
+        intro.style.opacity = '0';
+        main.classList.add('visible');
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
