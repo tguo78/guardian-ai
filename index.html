@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Guardian AI</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #002F7D;
+      color: #002F7D;
+    }
+
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('new_header_phones.png') no-repeat center center/cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 2rem;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      max-width: 800px;
+    }
+
+    .section {
+      background-color: #ffffff;
+      color: #002F7D;
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: 3rem auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
+    .section h2 {
+      margin-top: 0;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      margin-top: 1rem;
+    }
+
+    img.diagram {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      display: block;
+      margin: 2rem auto;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      width: 100%;
+    }
+
+    .contact-form button {
+      background-color: #002F7D;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: #001f4d;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      background-color: #f0f0f0;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>Guardian AI</h1>
+    <p>Invisible protection against cyberbullying—powered by on-device AI and ethical design.</p>
+  </div>
+
+  <div class="section" id="learn-more">
+    <h2>The Problem</h2>
+    <p>Cyberbullying is often silent, hidden in private messages and social feeds. Young people suffer in silence, while parents and tech platforms remain unaware.</p>
+  </div>
+
+  <div class="section">
+    <h2>Our Solution</h2>
+    <p>Guardian AI is a discreet, always-on system embedded within smartphones. It listens for signs of harmful behavior and intervenes before things escalate—without compromising privacy.</p>
+  </div>
+
+  <div class="section">
+    <h2>How Guardian AI Works</h2>
+    <img src="diagram.png" alt="Guardian AI process diagram" class="diagram" />
+  </div>
+
+  <div class="section">
+    <h2>Watch Guardian AI in Action</h2>
+    <video controls>
+      <source src="video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <div class="section">
+    <h2>Contact Us</h2>
+    <form class="contact-form" action="mailto:tguo78@gmail.com" method="POST" enctype="text/plain">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Guardian AI. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
